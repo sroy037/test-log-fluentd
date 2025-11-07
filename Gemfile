@@ -9,4 +9,3 @@ gemspec
 
 # Add runtime dependencies not covered by the gemspec
 gem "fluentd", "1.18.0"
-gem "executable-hooks", "1.7.1"
