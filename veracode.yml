@@ -7,5 +7,6 @@ actions:
       runs_on:
       packager_image: veracode/scm-packaging:3.0.0
       predependency_command: | 
+        apt-get install -y gem
         gem uninstall executable-hooks -a -x || true
         gem install bundler rubygems-bundler
