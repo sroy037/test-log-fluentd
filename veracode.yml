@@ -18,5 +18,5 @@ actions:
         # Install Fluentd and dependencies locally (if Gemfile present)
         bundle install || gem install fluentd -v "~> 1.16" fluent-plugin-lm-logs
 
-        # Optional: clean up / check gem list
+        # Optional: clean up / check Gem list
         bundle list || gem list
