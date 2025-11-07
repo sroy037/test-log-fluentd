@@ -2,8 +2,3 @@ actions:
   ruby:
     version: "3.1.4"      # stable and compatible with Fluentd 1.x & plugin gems
     bundle: "2.4.22"      # Bundler compatible with Ruby 3.1+
-  veracode_static_scan:
-    build:
-      predependency_command: |
-        gem install bundler -v 2.4.22
-        bundle install || gem install fluentd -v "~> 1.18" fluent-plugin-lm-logs executable-hooks
