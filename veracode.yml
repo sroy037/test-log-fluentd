@@ -2,21 +2,3 @@ actions:
   ruby:
     version: "3.1.4"      # stable and compatible with Fluentd 1.x & plugin gems
     bundle: "2.4.22"      # Bundler compatible with Ruby 3.1+
-  veracode_static_scan:
-    build:
-      predependency_command: |
-        # Update package lists (for Ubuntu-based runners)
-        sudo apt-get update -y
-
-        # Install Ruby build essentials and dependencies
-        sudo apt-get install -y build-essential ruby-dev libffi-dev libssl-dev libyaml-dev zlib1g-dev
-
-        # Verify Ruby and Bundler
-        ruby -v
-        gem install bundler -v 2.4.22
-
-        # Install Fluentd and dependencies locally (if Gemfile present)
-        bundle install || gem install fluentd -v "~> 1.16" fluent-plugin-lm-logs
-
-        # Optional: clean up / check Gem list
-        bundle list || gem list
