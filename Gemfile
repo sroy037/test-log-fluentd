@@ -19,4 +19,3 @@ gem 'csv'
 # --- Compatibility fixes ---
 # Prevent old bundler hook gems from breaking Ruby 3.x
 gem 'bundler', '>= 2.3.0'
-gem 'rubygems-bundler', '>= 1.5.0'
